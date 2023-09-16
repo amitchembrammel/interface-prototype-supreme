@@ -1,0 +1,16 @@
+<1st-(lexer)>
+	create a lexer to get the tokens of your input program
+	scans input ~> produce matching tokens
+<2nd-(parser)>
+	create a parser that takes those tokens ~> returns an AST of your input program.
+	code taken from preprocessor ~> SMALL PARTS & analyzed {correct syntax [understandable for other software's]}
+	scans tokens ~> produce parsing result
+
+	                                                                                              exprsn
+	Example:                                                                                         |      }
+	    437 + 734 ~~lexer~~> {#tokens (437[num])  (+[plus])  (734[num]) #tokens} ~~parser~~>        sum     }~~>abstract syntax tree
+                                                                                                  ___|___   }          (AST)
+                                                                                                 |   |   |
+                                                                                                437  +  734
+<3rd-
+	AST->interprets!
